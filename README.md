@@ -1,1 +1,1 @@
-# myminiminers-jobs
+# crypto-game-jobs
