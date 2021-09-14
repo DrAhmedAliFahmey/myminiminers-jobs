@@ -68,8 +68,8 @@ app.set("query parser", function (str) {
 
 		/*************************** running jobs ***************************/
 		const {increaseGnomeProductivity} = require("./modules/gnomes/jobs/increace_gnome_productivity.job");
-		require("./modules/transactions/jobs/manage_transactions.job");
-		const {manageTransactions} = require("./modules/transactions/jobs/manage_transactions.job");
+		require("./modules/blockchain_sync/jobs/sync_blocks");
+		const {manageTransactions} = require("./modules/blockchain_sync/jobs/sync_blocks");
 		const {managePools} = require("./modules/pools/jobs/pool_managment.job");
 		const {mine} = require("./modules/pools/jobs/mine_coin.job");
 

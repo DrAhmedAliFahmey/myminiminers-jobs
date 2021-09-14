@@ -4,12 +4,12 @@ const Web3 = require("web3");
 const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.CHAIN_PROVIDER));
 const fs = require("fs");
 const path = require("path");
-const transactionModel = require("../../transactions/model");
+const transactionModel = require("../model");
 const {TRANSACTION_STATUS} = require("../model");
 
 
-const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/transactions/MyMiniMiners.json"), "utf8"));
-const GameActionsAbi = JSON.parse(fs.readFileSync(path.resolve("modules/transactions/GameActions.json"), "utf8"));
+const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/MyMiniMiners.json"), "utf8"));
+const GameActionsAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/GameActions.json"), "utf8"));
 
 
 const MyMiniMiners = new web3.eth.Contract(MyMiniMinersAbi.abi, process.env.MYMINIMINERS_CONTART_ADDRESS);

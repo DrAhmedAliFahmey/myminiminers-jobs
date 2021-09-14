@@ -1,0 +1,8 @@
+PROJECT_NAME=myminiminers
+MONGODB_NAME=myminiminers
+MONGO_DB=myminiminers
+PORT=3003
+
+MONGODB_URL=
+NODE_ENV=development
+MIN_CONFIRMATIONS=10

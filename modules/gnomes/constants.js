@@ -1,12 +1,47 @@
-const {TIME_IN_MILI} = require("../../framework/times");
-exports.CURRENT_STATE = {
-	DOING_NOTHING: "doing_nothing",
-	ON_TO_MARKETPLACE: "on_the_marketplace",
-	MINING: "mining"
+exports.RARITIES = {
+	LEGENDARY: "Legendary",
+	EPIC: "Epic",
+	RARE: "Rare",
+	COMMON: "Common"
+};
+exports.RARITIES_BY_INDEX = [
+	this.RARITIES.LEGENDARY,
+	this.RARITIES.EPIC,
+	this.RARITIES.RARE,
+	this.RARITIES.COMMON,
+];
+
+exports.COLLECTION = {
+	ALIENS: "Aliens",
+	ANGELS: "Angels",
+	UNDEAD: "Undead",
+	WILDLIFE: "Wildlife",
+	CYBERPUNKS: "Cyberpunks",
+	FASHION: "Fashion",
+	DEVILS: "Devils",
+	NINJA: "Ninja",
+	PIRATES: "Pirates",
+	POOL_PARTY: "Pool Party ",
+	NOBLES: "Nobles",
+	GLADIATORS: "Gladiators",
+	PRINCESS: "Princess",
+	WILD_WEST: "Wild West",
 };
 
+exports.COLLECTION_BY_INDEX = [
+	this.COLLECTION.ALIENS,
+	this.COLLECTION.ANGELS,
+	this.COLLECTION.UNDEAD,
+	this.COLLECTION.WILDLIFE,
+	this.COLLECTION.CYBERPUNKS,
+	this.COLLECTION.FASHION,
+	this.COLLECTION.DEVILS,
+	this.COLLECTION.NINJA,
+	this.COLLECTION.PIRATES,
+	this.COLLECTION.POOL_PARTY,
+	this.COLLECTION.NOBLES,
+	this.COLLECTION.GLADIATORS,
+	this.COLLECTION.PRINCESS,
+	this.COLLECTION.WILD_WEST,
+];
 
-exports.PRODUCTIVITY_REDUCE_TIME = 0.001;
-
-
-exports.INCREASE_PRODUCTIVITY_INTERVAL = TIME_IN_MILI.SECOND * 5;
