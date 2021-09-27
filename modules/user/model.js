@@ -1,5 +1,4 @@
 const frameWorkMongoDb = require("../../framework/database/mongodb");
-const {COLLECTION_BY_INDEX} = require("../../gnomes/constants");
 const collectionName = "users";
 const collection = () => frameWorkMongoDb.getCollection(collectionName);
 
@@ -15,9 +14,9 @@ exports.createUser = function createUser(payload) {
 	return collection().insertOne(payload);
 };
 
-exports.updatePower = function updatePower(address, collection, collectionPower, playerPower) {
+exports.updatePower = function updatePower(address, collectionKey, collectionPower, playerPower) {
 	const updateObj = {
-		["collectionsPower." + collection]: Number(collectionPower),
+		["collectionsPower." + collectionKey]: Number(collectionPower),
 		power: Number(playerPower)
 	};
 	return collection().updateOne({public_address: address}, {$set: updateObj});

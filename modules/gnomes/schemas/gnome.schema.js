@@ -8,7 +8,6 @@ exports.gnomeSchema = Joi.object({
 	name: Joi.string().required(),
 	full_name: Joi.string().required(),
 	description: Joi.string().required(),
-	image: Joi.string().required(),
 	rarity: Joi.string().allow(),
 	collection: Joi.string().required(),
 	in_collection: Joi.boolean().required(),

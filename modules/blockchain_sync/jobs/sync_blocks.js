@@ -6,12 +6,12 @@ const gnomesModel = require("../../gnomes/model");
 const gnomesListModel = require("../../gnomes_list/model");
 const generalStorageModel = require("../model");
 const usersActions = require("../../user/actions");
-const {ZERO_ADDRESS, CONFIRMATIONS} = require("../constants");
+const {ZERO_ADDRESS} = require("../constants");
 const {gnomeSchema} = require("../../gnomes/schemas/gnome.schema");
 const {COLLECTION_BY_INDEX} = require("../../gnomes/constants");
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
 
-const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/MyMiniMiners.json"), "utf8"));
+const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMiners.json"), "utf8"));
 
 const MyMiniMinersContract = new web3.eth.Contract(MyMiniMinersAbi.abi, process.env.MYMINIMINERS_CONTART_ADDRESS);
 const ROMAN_NUMBERS_BY_INDEX = [
@@ -33,33 +33,34 @@ async function syncBlocks() {
 
 		const waitingBlockToGetProcessed = await generalStorageModel.getWaitingBlockToGetProcessed();
 		const latestBlock = await web3.eth.getBlockNumber();
-		const nextBlock = waitingBlockToGetProcessed + 1;
+		const currentBlock = waitingBlockToGetProcessed;
 
-		if (nextBlock >= latestBlock - CONFIRMATIONS) {
+		if (currentBlock > latestBlock - process.env.MIN_CONFIRMATIONS) {
 			setTimeout(syncBlocks, 1000);
 			return;
 		}
 		/*************************** handle events logic *******************************/
-
 		const myMiniMinersEvents = await MyMiniMinersContract.getPastEvents("allEvents", {
 			fromBlock: waitingBlockToGetProcessed,
 			toBlock: waitingBlockToGetProcessed
 		});
+		//console.log(waitingBlockToGetProcessed,myMiniMinersEvents);
+
 		const myMiniMinersEventsSorted = sortEvents(myMiniMinersEvents);
 		for (let i = 0; i < myMiniMinersEventsSorted.length; i++) {
 			// if blockNumber is null the block was removed
 			if (!myMiniMinersEventsSorted[i].blockNumber) {
 				continue;
 			}
-			await createNewPlayerIfNotExists(myMiniMinersEventsSorted[i]);
-			await handleMintEvent(myMiniMinersEventsSorted[i]);
+			await createNewPlayerIfNotExists(myMiniMinersEventsSorted[i]).catch(console.error);
+			await handleMintEvent(myMiniMinersEventsSorted[i]).catch(console.error);
 			await handleBurnEvent(myMiniMinersEventsSorted[i]);
 			await handleGnomeTransferEvent(myMiniMinersEventsSorted[i]);
 			await handleCollectionChangeEvent(myMiniMinersEventsSorted[i]);
 			await handlePowerChangeEvent(myMiniMinersEventsSorted[i]);
 		}
 		/********************************* end *****************************************/
-		await generalStorageModel.updateWaitingBlockToGetProcessed(nextBlock);
+		await generalStorageModel.updateWaitingBlockToGetProcessed(currentBlock + 1);
 	} catch (e) {
 		console.error(e);
 	}
@@ -95,9 +96,8 @@ async function handleMintEvent(event) {
 		return;
 	}
 	const gnomeTemplate = await gnomesListModel.getById(Number(event.returnValues.gnomeId));
-	if (gnomeTemplate) {
-		console.error("gnomeTemplate for id" + Number(event.returnValues.gnomeId) + " not found");
-		return;
+	if (!gnomeTemplate) {
+		return console.error("gnomeTemplate for id " + Number(event.returnValues.gnomeId) + " not found");
 
 	}
 	const {error, value} = gnomeSchema.validate({
@@ -108,14 +108,13 @@ async function handleMintEvent(event) {
 		name: gnomeTemplate.name,
 		full_name: gnomeTemplate.name + " The " + ROMAN_NUMBERS_BY_INDEX[Number(event.returnValues.level) - 1],
 		description: gnomeTemplate.description,
-		image: gnomeTemplate.name + "/" + Number(event.returnValues.level),
 		rarity: gnomeTemplate.rarity,
 		collection: gnomeTemplate.collection,
 		in_collection: false,
 		level: Number(event.returnValues.level)
 	});
 	if (error) {
-		console.error();
+		return console.error();
 	}
 	return gnomesModel.create(value);
 }

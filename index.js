@@ -10,7 +10,7 @@ const {connectModules} = require("./framework/project_connector");
 const {bodyParserJsonMiddleware, bodyParserJsonUrlencodedMiddleware} = require("./framework/body_parser");
 const {morgan, log, colors} = require("./framework/logs");
 const frameworkMongodb = require("./framework/database/mongodb");
-const frameworkRedis = require("./framework/database/redis");
+//const frameworkRedis = require("./framework/database/redis");
 const {errorHandler} = require("./framework/errors/errors");
 const config = require("./conifg");
 
@@ -32,7 +32,7 @@ app.set("query parser", function (str) {
 		log(colors.brightGreen("************ connecting to databases ************"));
 		await frameworkMongodb.connect({});
 		log(colors.brightGreen("************ connected to mongodb ************"));
-		await frameworkRedis.connect({db: frameworkRedis.DEFAULT_REDIS_DBS.SESSION, promisify: false});
+		//await frameworkRedis.connect({db: frameworkRedis.DEFAULT_REDIS_DBS.SESSION, promisify: false});
 		//await frameworkRedis.connect({pubsub: true});
 		//log(colors.brightGreen("************ connected to redis ************"));
 
@@ -67,16 +67,14 @@ app.set("query parser", function (str) {
 		});
 
 		/*************************** running jobs ***************************/
-		const {increaseGnomeProductivity} = require("./modules/gnomes/jobs/increace_gnome_productivity.job");
 		require("./modules/blockchain_sync/jobs/sync_blocks");
-		const {manageTransactions} = require("./modules/blockchain_sync/jobs/sync_blocks");
-		const {managePools} = require("./modules/pools/jobs/pool_managment.job");
-		const {mine} = require("./modules/pools/jobs/mine_coin.job");
+		const {syncBlocks} = require("./modules/blockchain_sync/jobs/sync_blocks");
+
 
 		// mine();
 		// managePools();
 		// increaseGnomeProductivity();
-		manageTransactions();
+		syncBlocks();
 	} catch (e) {
 		console.error(e);
 		process.exit(1);
