@@ -103,7 +103,7 @@ async function handleMintEvent(event) {
 	const {error, value} = gnomeSchema.validate({
 		token_id: Number(event.returnValues.tokenId),
 		gnome_id: Number(event.returnValues.gnomeId),
-		public_address: event.returnValues.player,
+		public_address: event.returnValues.player.toLowerCase(),
 		created_at: new Date(),
 		name: gnomeTemplate.name,
 		full_name: gnomeTemplate.name + " The " + ROMAN_NUMBERS_BY_INDEX[Number(event.returnValues.level) - 1],
