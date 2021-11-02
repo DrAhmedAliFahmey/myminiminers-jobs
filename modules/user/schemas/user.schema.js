@@ -5,7 +5,7 @@ exports.userSchema = Joi.object({
 	avatar: Joi.string().required(),
 	avatar_color: Joi.string().required(),
 	nickname: Joi.string().min(2).required(),
-	public_address: Joi.string().required(),
+	public_address: Joi.string().lowercase().trim().required(),
 	power: Joi.number().required(),
 	collectionsPower: Joi.object().required()
 });

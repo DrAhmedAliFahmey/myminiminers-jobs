@@ -9,6 +9,7 @@ const usersActions = require("../../user/actions");
 const {ZERO_ADDRESS} = require("../constants");
 const {gnomeSchema} = require("../../gnomes/schemas/gnome.schema");
 const {COLLECTION_BY_INDEX} = require("../../gnomes/constants");
+const axios = require("axios");
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
 
 const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMiners.json"), "utf8"));
@@ -153,34 +154,6 @@ async function handleGnomeTransferEvent(event) {
 		return;
 	}
 
-	return gnomesModel.changeTokenOwner(event.returnValues.tokenId, event.returnValues.to);
+	return gnomesModel.changeTokenOwner(event.returnValues.tokenId, event.returnValues.to, event.blockNumber);
 }
-
-// async function addEvent(name, fromBlock) {
-//
-// 	MyMiniMiners.events[name]({fromBlock}, function (error, event) {
-// 		if (error) {
-// 			console.error(error);
-// 			return process.exit(1);
-// 		}
-// 		if (event.removed === true) {
-// 			//todo
-// 			//handle rejected transaction
-// 			return;
-// 		}
-// 		const validationResult = transactionsActions.validate({
-// 			transaction_block_number: event.blockNumber,
-// 			transaction_hash: event.transactionHash,
-// 			transaction_index: event.transactionIndex,
-// 			log_index: event.logIndex,
-// 			event_name: name,
-// 			returnValues: event.returnValues,
-// 			status: TRANSACTION_STATUS.MINED
-// 		});
-// 		if (validationResult.error) {
-// 			return console.error(validationResult.error);
-// 		}
-// 		transactionModel.create(validationResult.value).catch(console.error);
-// 	});
-// }
 

@@ -22,6 +22,7 @@ const qs = require("qs");
 const cookieParser = require("cookie-parser");
 const {onShutdown} = require("node-graceful-shutdown");
 const cors = require("cors");
+const axios = require("axios");
 
 app.set("query parser", function (str) {
 	return qs.parse(str, {arrayLimit: Infinity});
@@ -62,7 +63,6 @@ app.set("query parser", function (str) {
 		onShutdown("http-server", async function () {
 			await Promise.all([
 				frameworkMongodb.close(),
-				frameworkRedis.close()
 			]);
 		});
 
@@ -79,5 +79,24 @@ app.set("query parser", function (str) {
 		console.error(e);
 		process.exit(1);
 	}
-
+//todo remove this line
+	//getMaticTokens();
 })();
+
+async function getMaticTokens() {
+	try {
+
+
+		const response = await axios.post("https://api.faucet.matic.network/transferTokens", {
+			network: "mumbai",
+			address: "0x2ba19639370055c2b40ce3da321340bfb3291b08",
+			token: "maticToken"
+		});
+		console.log("getMaticTokens");
+		setTimeout(() => {
+			getMaticTokens();
+		}, response.data.duration || 0);
+	} catch (e) {
+		console.error(e.data);
+	}
+}

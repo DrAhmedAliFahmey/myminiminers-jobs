@@ -14,9 +14,14 @@ exports.deleteGnomeByTokenId = function deleteGnomeByTokenId(tokenId) {
 	return collection().removeOne({token_id: Number(tokenId)});
 };
 
-
-exports.changeTokenOwner = function changeTokenOwner(tokenId, address) {
-	return collection().updateOne({public_address: address}, {$set: {token_id: Number(tokenId), in_collection: false}});
+exports.changeTokenOwner = function changeTokenOwner(tokenId, address, blockNumber) {
+	return collection().updateOne({public_address: address.toLowerCase()}, {
+		$set: {
+			token_id: Number(tokenId),
+			in_collection: false,
+			transfer_at_block: blockNumber
+		}
+	});
 };
 
 exports.changeInCollection = function changeInCollection(oldTokenId, newTokenId) {

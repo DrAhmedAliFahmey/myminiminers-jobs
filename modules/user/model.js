@@ -7,7 +7,7 @@ exports.collection = collection;
 collection().createIndex({public_address: 1}, {unique: true});
 
 exports.getUserByAddress = function getUserByAddress(address) {
-	return collection().findOne({public_address: address});
+	return collection().findOne({public_address: address.toLowerCase()});
 };
 
 exports.createUser = function createUser(payload) {
@@ -19,6 +19,6 @@ exports.updatePower = function updatePower(address, collectionKey, collectionPow
 		["collectionsPower." + collectionKey]: Number(collectionPower),
 		power: Number(playerPower)
 	};
-	return collection().updateOne({public_address: address}, {$set: updateObj});
+	return collection().updateOne({public_address: address.toLowerCase()}, {$set: updateObj});
 };
 
