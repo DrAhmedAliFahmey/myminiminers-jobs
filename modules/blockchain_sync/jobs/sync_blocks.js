@@ -124,7 +124,7 @@ async function handleBurnEvent(event) {
 	if (event.event !== "Transfer" || event.returnValues.to !== ZERO_ADDRESS) {
 		return;
 	}
-	return gnomesModel.burnGnomeByTokenId(event.returnValues.tokenId);
+	return gnomesModel.changeTokenOwner(event.returnValues.tokenId, event.returnValues.to,event.blockNumber);
 
 }
 
