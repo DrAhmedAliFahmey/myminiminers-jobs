@@ -17,9 +17,9 @@ exports.changeTokenOwner = function changeTokenOwner(tokenId, address, blockNumb
 	if (address === ZERO_ADDRESS) {
 		burned = true;
 	}
-	return collection().updateOne({public_address: address.toLowerCase()}, {
+	return collection().updateOne({	token_id: Number(tokenId)}, {
 		$set: {
-			token_id: Number(tokenId),
+			public_address: address.toLowerCase(),
 			in_collection: false,
 			transfer_at_block: blockNumber,
 			burned
