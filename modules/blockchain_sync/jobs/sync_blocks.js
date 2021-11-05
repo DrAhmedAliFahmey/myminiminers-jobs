@@ -9,7 +9,6 @@ const usersActions = require("../../user/actions");
 const {ZERO_ADDRESS} = require("../constants");
 const {gnomeSchema} = require("../../gnomes/schemas/gnome.schema");
 const {COLLECTION_BY_INDEX} = require("../../gnomes/constants");
-const axios = require("axios");
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
 
 const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMiners.json"), "utf8"));
@@ -125,7 +124,7 @@ async function handleBurnEvent(event) {
 	if (event.event !== "Transfer" || event.returnValues.to !== ZERO_ADDRESS) {
 		return;
 	}
-	return gnomesModel.deleteGnomeByTokenId(event.returnValues.tokenId);
+	return gnomesModel.burnGnomeByTokenId(event.returnValues.tokenId);
 
 }
 

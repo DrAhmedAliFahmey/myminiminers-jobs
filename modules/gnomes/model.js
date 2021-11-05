@@ -1,4 +1,5 @@
 const frameWorkMongoDb = require("../../framework/database/mongodb");
+const {ZERO_ADDRESS} = require("../blockchain_sync/constants");
 
 const collectionName = "gnomes";
 const collection = () => frameWorkMongoDb.getCollection(collectionName);
@@ -10,16 +11,18 @@ exports.create = function create(payload) {
 	return collection().insertOne(payload);
 };
 
-exports.deleteGnomeByTokenId = function deleteGnomeByTokenId(tokenId) {
-	return collection().removeOne({token_id: Number(tokenId)});
-};
 
-exports.changeTokenOwner = function changeTokenOwner(tokenId, address, blockNumber) {
+exports.changeTokenOwner = function changeTokenOwner(tokenId, address, blockNumber, burned = false) {
+
+	if (address === ZERO_ADDRESS) {
+		burned = true;
+	}
 	return collection().updateOne({public_address: address.toLowerCase()}, {
 		$set: {
 			token_id: Number(tokenId),
 			in_collection: false,
-			transfer_at_block: blockNumber
+			transfer_at_block: blockNumber,
+			burned
 		}
 	});
 };
