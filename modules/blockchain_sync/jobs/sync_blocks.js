@@ -111,7 +111,9 @@ async function handleMintEvent(event) {
 		rarity: gnomeTemplate.rarity,
 		collection: gnomeTemplate.collection,
 		in_collection: false,
-		level: Number(event.returnValues.level)
+		level: Number(event.returnValues.level),
+		transfer_at_block:0,
+		burned:false
 	});
 	if (error) {
 		return console.error();
