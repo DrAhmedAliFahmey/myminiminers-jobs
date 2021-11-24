@@ -10,18 +10,27 @@ exports.collection = collection;
 exports.create = function create(payload) {
 	return collection().insertOne(payload);
 };
-
-
-exports.changeTokenOwner = function changeTokenOwner(tokenId, address, blockNumber, burned = false) {
+exports.setHighestGnomeInCollection = async function setHighestGnomeInCollection(address, gnomeId) {
+	const gnome = await collection().findOne({public_address: address, gnome_id: gnomeId}, {$sort: {level: -1}});
+	await collection().updateMany({
+		public_address: address,
+		gnome_id: gnomeId,
+		in_collection: true
+	}, {$set: {in_collection: false}});
+	return collection().updateOne({token_id: gnome.token_id}, {$set: {in_collection: true}});
+};
+exports.getGnomeByTokenId = function getGnomeByTokenId(tokenId) {
+	return collection().findOne({token_id: tokenId});
+};
+exports.changeTokenOwner = function changeTokenOwner(tokenId, address, burned = false) {
 
 	if (address === ZERO_ADDRESS) {
 		burned = true;
 	}
-	return collection().updateOne({	token_id: Number(tokenId)}, {
+	return collection().updateOne({token_id: Number(tokenId)}, {
 		$set: {
 			public_address: address.toLowerCase(),
 			in_collection: false,
-			transfer_at_block: blockNumber,
 			burned
 		}
 	});
