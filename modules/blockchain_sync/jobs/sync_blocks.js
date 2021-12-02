@@ -6,6 +6,7 @@ const gnomesListModel = require("../../gnomes_list/model");
 const generalStorageModel = require("../model");
 const {ZERO_ADDRESS} = require("../constants");
 const {gnomeSchema} = require("../../gnomes/schemas/gnome.schema");
+const {RARITIES_BY_INDEX} = require("../../gnomes/constants");
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
 
 const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMiners.json"), "utf8"));
@@ -76,6 +77,7 @@ async function handleMintEvent(event) {
 		full_name: `${gnomeTemplate.name} (★${event.returnValues.level}) #${event.returnValues.tokenId} `,
 		description: gnomeTemplate.description,
 		rarity: gnomeTemplate.rarity,
+		rarity_index: RARITIES_BY_INDEX.indexOf(gnomeTemplate.rarity),
 		collection: gnomeTemplate.collection,
 		in_collection: false,
 		level: Number(event.returnValues.level),

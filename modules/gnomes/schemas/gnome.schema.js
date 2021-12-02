@@ -9,6 +9,7 @@ exports.gnomeSchema = Joi.object({
 	full_name: Joi.string().required(),
 	description: Joi.string().required(),
 	rarity: Joi.string().allow(),
+	rarity_index: Joi.number().allow(),
 	collection: Joi.string().required(),
 	in_collection: Joi.boolean().required(),
 	level: Joi.number().min(1).max(10).required(),
