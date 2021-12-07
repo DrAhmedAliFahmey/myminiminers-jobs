@@ -14,6 +14,7 @@ exports.connect = async function connect({name = DEFAULT_NAME, url = DEFAULT_URL
 	}
 	const con = await MongoClient.connect(url, options);
 	connections[name] = con;
+
 	return connections[name];
 };
 

@@ -16,8 +16,6 @@ const MyMiniMinersContract = new web3.eth.Contract(MyMiniMinersAbi.abi, process.
 
 async function syncBlocks() {
 	try {
-
-
 		const waitingBlockToGetProcessed = await generalStorageModel.getWaitingBlockToGetProcessed();
 		const latestBlock = await web3.eth.getBlockNumber();
 		const currentBlock = waitingBlockToGetProcessed;
