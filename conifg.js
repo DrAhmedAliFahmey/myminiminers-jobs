@@ -15,8 +15,6 @@ exports.getMongoDbOptions = function getMongoDbOptions() {
 	return {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
-		reconnectTries: Number.MAX_VALUE,
-		reconnectInterval: 1000,
 		poolSize: this.getNodeEnv() === "development" ? 2 : 10,
 	};
 };

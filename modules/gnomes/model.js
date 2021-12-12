@@ -7,11 +7,14 @@ const collection = () => frameWorkMongoDb.getCollection(collectionName);
 exports.collection = collection;
 
 
+exports.createMany = function create(payload) {
+	return collection().insertMany(payload);
+};
 exports.create = function create(payload) {
 	return collection().insertOne(payload);
 };
 exports.setHighestGnomeInCollection = async function setHighestGnomeInCollection(address, gnomeId) {
-	const gnome = await collection().findOne({public_address: address, gnome_id: gnomeId}, {$sort: {level: -1}});
+	const gnome = await collection().findOne({public_address: address, gnome_id: gnomeId}, {sort: {level: -1}});
 	await collection().updateMany({
 		public_address: address,
 		gnome_id: gnomeId,

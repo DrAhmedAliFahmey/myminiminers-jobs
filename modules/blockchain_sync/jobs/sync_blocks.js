@@ -16,6 +16,7 @@ const MyMiniMinersContract = new web3.eth.Contract(MyMiniMinersAbi.abi, process.
 
 async function syncBlocks() {
 	try {
+
 		const waitingBlockToGetProcessed = await generalStorageModel.getWaitingBlockToGetProcessed();
 		const latestBlock = await web3.eth.getBlockNumber();
 		const currentBlock = waitingBlockToGetProcessed;
@@ -25,12 +26,13 @@ async function syncBlocks() {
 			return;
 		}
 		/*************************** handle events logic *******************************/
+
 		const myMiniMinersEvents = await MyMiniMinersContract.getPastEvents("allEvents", {
 			fromBlock: waitingBlockToGetProcessed,
 			toBlock: waitingBlockToGetProcessed
 		});
-
 		const myMiniMinersEventsSorted = sortEvents(myMiniMinersEvents);
+
 		for (let i = 0; i < myMiniMinersEventsSorted.length; i++) {
 			// if blockNumber is null the block was removed
 			if (!myMiniMinersEventsSorted[i].blockNumber) {
@@ -55,6 +57,39 @@ function sortEvents(events) {
 	const eventsDup = [...events];
 	eventsDup.sort((l, r) => (l.transactionIndex - r.transactionIndex || l.logIndex - r.logIndex));
 	return eventsDup;
+}
+
+async function handleMintEventForTest(events) {
+	const gnomesList = await gnomesListModel.get();
+	const gnomes = [];
+	events.forEach(event => {
+		if (event.event !== "Mint") {
+			return;
+		}
+		const gnomeTemplate = gnomesList.find(gnome => gnome.gnome_id.toString() === event.returnValues.gnomeId);
+
+		const {error, value} = gnomeSchema.validate({
+			token_id: Number(event.returnValues.tokenId),
+			gnome_id: Number(event.returnValues.gnomeId),
+			public_address: event.returnValues.player.toLowerCase(),
+			created_at: new Date(),
+			name: gnomeTemplate.name,
+			full_name: `${gnomeTemplate.name} (★${event.returnValues.level}) #${event.returnValues.tokenId} `,
+			description: gnomeTemplate.description,
+			rarity: gnomeTemplate.rarity,
+			rarity_index: RARITIES_BY_INDEX.indexOf(gnomeTemplate.rarity),
+			collection: gnomeTemplate.collection,
+			in_collection: false,
+			level: Number(event.returnValues.level),
+			burned: false
+		});
+		if (error) {
+			return console.error();
+		}
+		gnomes.push(value);
+	});
+	return gnomesModel.createMany(gnomes);
+
 }
 
 async function handleMintEvent(event) {
