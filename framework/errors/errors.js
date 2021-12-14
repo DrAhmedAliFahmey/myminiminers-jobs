@@ -32,8 +32,12 @@ function setJsonError() {
 
 exports.errorHandler = function errorHandler(err, req, res, next) {
 	console.error(err);
-	const message = process.env.NODE_ENV === "development" || err.status <500 ? err.message : httpStatus[httpStatus.INTERNAL_SERVER_ERROR];
+
+	const message = process.env.NODE_ENV === "development" || err.status < 500 ? err.message : httpStatus[httpStatus.INTERNAL_SERVER_ERROR];
 	res.status(err.status || httpStatus.INTERNAL_SERVER_ERROR).json({message});
+	if (typeof err === "object" && err.name === "MongoError" && err.message.includes("Topology")) {
+		process.exit(1);
+	}
 };
 
 
