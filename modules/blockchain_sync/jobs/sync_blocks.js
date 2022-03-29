@@ -4,20 +4,24 @@ const path = require("path");
 const gnomesModel = require("../../gnomes/model");
 const gnomesListModel = require("../../gnomes_list/model");
 const generalStorageModel = require("../model");
-const {ZERO_ADDRESS} = require("../constants");
+const {ZERO_ADDRESS, BLOCK_NUMBER} = require("../constants");
 const {gnomeSchema} = require("../../gnomes/schemas/gnome.schema");
 const {RARITIES_BY_INDEX} = require("../../gnomes/constants");
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
 
-const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMiners.json"), "utf8"));
+const MyMiniMinersTokenAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMinersToken.json"), "utf8"));
+const GnomesAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Gnomes.json"), "utf8"));
+const CharacterAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Character.json"), "utf8"));
 
-const MyMiniMinersContract = new web3.eth.Contract(MyMiniMinersAbi.abi, process.env.MYMINIMINERS_CONTART_ADDRESS);
+const MyMiniMinersTokenContract = new web3.eth.Contract(MyMiniMinersTokenAbi.abi, process.env.MYMINIMINERS_TOKEN_CONTART_ADDRESS);
+const GnomesContract = new web3.eth.Contract(GnomesAbi.abi, process.env.GNOMES_CONTART_ADDRESS);
+const CharacterContract = new web3.eth.Contract(CharacterAbi.abi, process.env.CHARACTER_CONTART_ADDRESS);
 
 
 async function syncBlocks() {
 	try {
 
-		const waitingBlockToGetProcessed = await generalStorageModel.getWaitingBlockToGetProcessed();
+		const waitingBlockToGetProcessed = await generalStorageModel.getWaitingBlockToGetProcessed(BLOCK_NUMBER.GNOMES_CONTRACT);
 		const latestBlock = await web3.eth.getBlockNumber();
 		const currentBlock = waitingBlockToGetProcessed;
 
@@ -27,20 +31,20 @@ async function syncBlocks() {
 		}
 		/*************************** handle events logic *******************************/
 
-		const myMiniMinersEvents = await MyMiniMinersContract.getPastEvents("allEvents", {
+		const gnomesEvents = await GnomesContract.getPastEvents("allEvents", {
 			fromBlock: waitingBlockToGetProcessed,
 			toBlock: waitingBlockToGetProcessed
 		});
-		const myMiniMinersEventsSorted = sortEvents(myMiniMinersEvents);
+		const gnomeEventsSorted = sortEvents(gnomesEvents);
 
-		for (let i = 0; i < myMiniMinersEventsSorted.length; i++) {
+		for (let i = 0; i < gnomeEventsSorted.length; i++) {
 			// if blockNumber is null the block was removed
-			if (!myMiniMinersEventsSorted[i].blockNumber) {
+			if (!gnomeEventsSorted[i].blockNumber) {
 				continue;
 			}
-			await handleMintEvent(myMiniMinersEventsSorted[i]).catch(console.error);
-			await handleBurnEvent(myMiniMinersEventsSorted[i]);
-			await handleGnomeTransferEvent(myMiniMinersEventsSorted[i]);
+			await handleMintEvent(gnomeEventsSorted[i]).catch(console.error);
+			await handleBurnEvent(gnomeEventsSorted[i]);
+			await handleGnomeTransferEvent(gnomeEventsSorted[i]);
 		}
 		/********************************* end *****************************************/
 		await generalStorageModel.updateWaitingBlockToGetProcessed(currentBlock + 1);
