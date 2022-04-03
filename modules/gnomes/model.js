@@ -13,19 +13,16 @@ exports.createMany = function create(payload) {
 exports.create = function create(payload) {
 	return collection().insertOne(payload);
 };
-exports.setHighestGnomeInCollection = async function setHighestGnomeInCollection(address, gnomeId) {
-	const gnome = await collection().findOne({public_address: address, gnome_id: gnomeId}, {sort: {level: -1}});
-	await collection().updateMany({
-		public_address: address,
-		gnome_id: gnomeId,
-		in_collection: true
-	}, {$set: {in_collection: false}});
-	return collection().updateOne({token_id: gnome.token_id}, {$set: {in_collection: true}});
+exports.removeCurrentGnomeFromCollection = async function removeCurrentGnomeFromCollection(address, collectionId) {
+	return collection().update({public_address: address, collection: collectionId}, {$set: {in_collection: false}});
+};
+exports.removeCurrentGnomeFromCollectionByGnomeId = async function removeCurrentGnomeFromCollection(address, gnomeId) {
+	return collection().update({public_address: address, gnome_id: gnomeId}, {$set: {in_collection: false}});
 };
 exports.getGnomeByTokenId = function getGnomeByTokenId(tokenId) {
 	return collection().findOne({token_id: tokenId});
 };
-exports.changeTokenOwner = function changeTokenOwner(tokenId, address, burned = false) {
+exports.changeTokenOwner = function changeTokenOwner({tokenId, address, burned = false, inCollection = false}) {
 
 	if (address === ZERO_ADDRESS) {
 		burned = true;
@@ -33,7 +30,7 @@ exports.changeTokenOwner = function changeTokenOwner(tokenId, address, burned = 
 	return collection().updateOne({token_id: Number(tokenId)}, {
 		$set: {
 			public_address: address.toLowerCase(),
-			in_collection: false,
+			in_collection: inCollection,
 			burned
 		}
 	});

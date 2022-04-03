@@ -13,5 +13,6 @@ exports.gnomeSchema = Joi.object({
 	collection: Joi.string().required(),
 	in_collection: Joi.boolean().required(),
 	level: Joi.number().min(1).max(10).required(),
+	power: Joi.number().required(),
 	burned: Joi.boolean().required(),
 });
