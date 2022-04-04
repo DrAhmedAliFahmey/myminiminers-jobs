@@ -1,17 +1,8 @@
 const Web3 = require("web3");
-const fs = require("fs");
-const path = require("path");
 
 const generalStorageModel = require("../model");
 
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER));
-
-const MyMiniMinersTokenAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/MyMiniMinersToken.json"), "utf8"));
-const CharacterAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Character.json"), "utf8"));
-
-const MyMiniMinersTokenContract = new web3.eth.Contract(MyMiniMinersTokenAbi.abi, process.env.MYMINIMINERS_TOKEN_CONTART_ADDRESS);
-const CharacterContract = new web3.eth.Contract(CharacterAbi.abi, process.env.CHARACTER_CONTART_ADDRESS);
-const MinesContract = new web3.eth.Contract(CharacterAbi.abi, process.env.MINES_CONTART_ADDRESS);
 
 
 async function syncBlocks(contractName,contract, eventsHandlerFunction) {

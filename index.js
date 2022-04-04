@@ -68,13 +68,13 @@ app.set("query parser", function (str) {
 
 		/*************************** running jobs ***************************/
 		require("./modules/blockchain_sync/jobs/sync_blocks");
-		const {syncBlocks} = require("./modules/blockchain_sync/jobs/sync_blocks");
+		const minesJob = require("./modules/blockchain_sync/jobs/contracts/mines");
+		const characterJob = require("./modules/blockchain_sync/jobs/contracts/character");
+		const gnomesJob = require("./modules/blockchain_sync/jobs/contracts/gnomes");
 
-
-		// mine();
-		// managePools();
-		// increaseGnomeProductivity();
-		syncBlocks();
+		gnomesJob.syncBlocks();
+		characterJob.syncBlocks();
+		gnomesJob.syncBlocks();
 	} catch (e) {
 		console.error(e);
 		process.exit(1);

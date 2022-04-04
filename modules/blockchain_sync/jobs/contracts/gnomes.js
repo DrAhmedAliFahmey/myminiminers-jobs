@@ -19,7 +19,7 @@ exports.syncBlocks = function () {
 };
 
 async function eventsHandlerFunction(event) {
-	await handleMintEvent(event).catch(console.error);
+	await handleMintEvent(event);
 	await handleBurnEvent(event);
 	await handleGnomeTransferEvent(event);
 }
