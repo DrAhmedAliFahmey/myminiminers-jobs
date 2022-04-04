@@ -1,0 +1,411 @@
+{
+  "contractName": "IPlayerGnome",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPlayerGnome.sol\":\"IPlayerGnome\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPlayerGnome.sol\":{\"keccak256\":\"0xe06e8ecf44f009ac33034f82ecde3880ddcbf8aabd08f6405bf5b94b16713b64\",\"urls\":[\"bzz-raw://dd08760cca8d6f51f821156f13895372b78e32e55b44cc3910f1a5a89ed87599\",\"dweb:/ipfs/QmWVFpwibq1GJ1NX7Cq6V3PXpo78L5ELKWYr6BYop2ZAjg\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\r\npragma solidity 0.8.10;\r\n\r\ninterface IPlayerGnome  {\r\n    struct structPlayerGnome {\r\n        uint8 gnomeId;\r\n        uint8 level;\r\n        uint256 tokenId;\r\n        bool canBeTraded;\r\n        bool exists;\r\n\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IPlayerGnome.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IPlayerGnome.sol",
+    "exportedSymbols": {
+      "IPlayerGnome": [
+        6965
+      ]
+    },
+    "id": 6966,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6953,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:40"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlayerGnome",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6965,
+        "linearizedBaseContracts": [
+          6965
+        ],
+        "name": "IPlayerGnome",
+        "nameLocation": "39:12:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IPlayerGnome.structPlayerGnome",
+            "id": 6964,
+            "members": [
+              {
+                "constant": false,
+                "id": 6955,
+                "mutability": "mutable",
+                "name": "gnomeId",
+                "nameLocation": "102:7:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "96:13:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6954,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "96:5:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6957,
+                "mutability": "mutable",
+                "name": "level",
+                "nameLocation": "126:5:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "120:11:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6956,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "120:5:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6959,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "150:7:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "142:15:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6958,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "142:7:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6961,
+                "mutability": "mutable",
+                "name": "canBeTraded",
+                "nameLocation": "173:11:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "168:16:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6960,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "168:4:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6963,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "200:6:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "195:11:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6962,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:4:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerGnome",
+            "nameLocation": "67:17:40",
+            "nodeType": "StructDefinition",
+            "scope": 6965,
+            "src": "60:156:40",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6966,
+        "src": "29:190:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "2:219:40"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IPlayerGnome.sol",
+    "exportedSymbols": {
+      "IPlayerGnome": [
+        6965
+      ]
+    },
+    "id": 6966,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6953,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:40"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlayerGnome",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6965,
+        "linearizedBaseContracts": [
+          6965
+        ],
+        "name": "IPlayerGnome",
+        "nameLocation": "39:12:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IPlayerGnome.structPlayerGnome",
+            "id": 6964,
+            "members": [
+              {
+                "constant": false,
+                "id": 6955,
+                "mutability": "mutable",
+                "name": "gnomeId",
+                "nameLocation": "102:7:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "96:13:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6954,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "96:5:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6957,
+                "mutability": "mutable",
+                "name": "level",
+                "nameLocation": "126:5:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "120:11:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6956,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "120:5:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6959,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "150:7:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "142:15:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6958,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "142:7:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6961,
+                "mutability": "mutable",
+                "name": "canBeTraded",
+                "nameLocation": "173:11:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "168:16:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6960,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "168:4:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6963,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "200:6:40",
+                "nodeType": "VariableDeclaration",
+                "scope": 6964,
+                "src": "195:11:40",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6962,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:4:40",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerGnome",
+            "nameLocation": "67:17:40",
+            "nodeType": "StructDefinition",
+            "scope": 6965,
+            "src": "60:156:40",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6966,
+        "src": "29:190:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "2:219:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.550Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

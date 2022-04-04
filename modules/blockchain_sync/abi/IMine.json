@@ -1,0 +1,931 @@
+{
+  "contractName": "IMine",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IMine.sol\":\"IMine\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IMine.sol\":{\"keccak256\":\"0x59aa7dcf2442c5db8a6cb36e8a6560c695d581d6fb338eb119d362e9765bb22c\",\"urls\":[\"bzz-raw://66baa8f57cf97292b5d0885fdcd7991b2f51fec744da45ed61512c5d330a29b2\",\"dweb:/ipfs/QmXYjyMWbrrBEoEuBT4he5egzH4RQA1P4FzxjYNnMpBY6Q\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface IMine {\r\n\r\n    struct structMiner {\r\n        uint8 collectionId;\r\n        uint startTime;\r\n        address account;\r\n    }\r\n\r\n    struct structInjuredCollection {\r\n        uint power;\r\n        uint startTime;\r\n    }\r\n\r\n    struct structPlayerInMine {\r\n        uint32 mineId;\r\n        uint32 slot;\r\n    }\r\n\r\n    struct structMine {\r\n        uint32 powerMulti; // multiple the power difference in a fight\r\n        structMiner miner;\r\n        uint minPower;\r\n        uint maxPower;\r\n        uint productionRate; // coins in seconds 1 token = 10**18\r\n\r\n        bool exists;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IMine.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IMine.sol",
+    "exportedSymbols": {
+      "IMine": [
+        6941
+      ]
+    },
+    "id": 6942,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6909,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMine",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6941,
+        "linearizedBaseContracts": [
+          6941
+        ],
+        "name": "IMine",
+        "nameLocation": "37:5:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMine.structMiner",
+            "id": 6916,
+            "members": [
+              {
+                "constant": false,
+                "id": 6911,
+                "mutability": "mutable",
+                "name": "collectionId",
+                "nameLocation": "88:12:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "82:18:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6910,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "82:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6913,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "116:9:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "111:14:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6912,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "111:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6915,
+                "mutability": "mutable",
+                "name": "account",
+                "nameLocation": "144:7:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "136:15:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6914,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structMiner",
+            "nameLocation": "59:11:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "52:107:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structInjuredCollection",
+            "id": 6921,
+            "members": [
+              {
+                "constant": false,
+                "id": 6918,
+                "mutability": "mutable",
+                "name": "power",
+                "nameLocation": "214:5:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6921,
+                "src": "209:10:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6917,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "209:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6920,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "235:9:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6921,
+                "src": "230:14:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6919,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "230:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structInjuredCollection",
+            "nameLocation": "174:23:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "167:85:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structPlayerInMine",
+            "id": 6926,
+            "members": [
+              {
+                "constant": false,
+                "id": 6923,
+                "mutability": "mutable",
+                "name": "mineId",
+                "nameLocation": "304:6:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6926,
+                "src": "297:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6922,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "297:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6925,
+                "mutability": "mutable",
+                "name": "slot",
+                "nameLocation": "328:4:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6926,
+                "src": "321:11:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6924,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "321:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerInMine",
+            "nameLocation": "267:18:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "260:80:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structMine",
+            "id": 6940,
+            "members": [
+              {
+                "constant": false,
+                "id": 6928,
+                "mutability": "mutable",
+                "name": "powerMulti",
+                "nameLocation": "384:10:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "377:17:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6927,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "377:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6931,
+                "mutability": "mutable",
+                "name": "miner",
+                "nameLocation": "461:5:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "449:17:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_structMiner_$6916_storage_ptr",
+                  "typeString": "struct IMine.structMiner"
+                },
+                "typeName": {
+                  "id": 6930,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6929,
+                    "name": "structMiner",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 6916,
+                    "src": "449:11:38"
+                  },
+                  "referencedDeclaration": 6916,
+                  "src": "449:11:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_structMiner_$6916_storage_ptr",
+                    "typeString": "struct IMine.structMiner"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6933,
+                "mutability": "mutable",
+                "name": "minPower",
+                "nameLocation": "482:8:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "477:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6932,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "477:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6935,
+                "mutability": "mutable",
+                "name": "maxPower",
+                "nameLocation": "506:8:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "501:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6934,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "501:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6937,
+                "mutability": "mutable",
+                "name": "productionRate",
+                "nameLocation": "530:14:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "525:19:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6936,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "525:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6939,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "599:6:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "594:11:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6938,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "594:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structMine",
+            "nameLocation": "355:10:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "348:265:38",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6942,
+        "src": "27:589:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:618:38"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IMine.sol",
+    "exportedSymbols": {
+      "IMine": [
+        6941
+      ]
+    },
+    "id": 6942,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6909,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMine",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6941,
+        "linearizedBaseContracts": [
+          6941
+        ],
+        "name": "IMine",
+        "nameLocation": "37:5:38",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IMine.structMiner",
+            "id": 6916,
+            "members": [
+              {
+                "constant": false,
+                "id": 6911,
+                "mutability": "mutable",
+                "name": "collectionId",
+                "nameLocation": "88:12:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "82:18:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6910,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "82:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6913,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "116:9:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "111:14:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6912,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "111:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6915,
+                "mutability": "mutable",
+                "name": "account",
+                "nameLocation": "144:7:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6916,
+                "src": "136:15:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6914,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structMiner",
+            "nameLocation": "59:11:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "52:107:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structInjuredCollection",
+            "id": 6921,
+            "members": [
+              {
+                "constant": false,
+                "id": 6918,
+                "mutability": "mutable",
+                "name": "power",
+                "nameLocation": "214:5:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6921,
+                "src": "209:10:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6917,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "209:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6920,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "235:9:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6921,
+                "src": "230:14:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6919,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "230:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structInjuredCollection",
+            "nameLocation": "174:23:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "167:85:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structPlayerInMine",
+            "id": 6926,
+            "members": [
+              {
+                "constant": false,
+                "id": 6923,
+                "mutability": "mutable",
+                "name": "mineId",
+                "nameLocation": "304:6:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6926,
+                "src": "297:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6922,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "297:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6925,
+                "mutability": "mutable",
+                "name": "slot",
+                "nameLocation": "328:4:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6926,
+                "src": "321:11:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6924,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "321:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerInMine",
+            "nameLocation": "267:18:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "260:80:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IMine.structMine",
+            "id": 6940,
+            "members": [
+              {
+                "constant": false,
+                "id": 6928,
+                "mutability": "mutable",
+                "name": "powerMulti",
+                "nameLocation": "384:10:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "377:17:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6927,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "377:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6931,
+                "mutability": "mutable",
+                "name": "miner",
+                "nameLocation": "461:5:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "449:17:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_structMiner_$6916_storage_ptr",
+                  "typeString": "struct IMine.structMiner"
+                },
+                "typeName": {
+                  "id": 6930,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 6929,
+                    "name": "structMiner",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 6916,
+                    "src": "449:11:38"
+                  },
+                  "referencedDeclaration": 6916,
+                  "src": "449:11:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_structMiner_$6916_storage_ptr",
+                    "typeString": "struct IMine.structMiner"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6933,
+                "mutability": "mutable",
+                "name": "minPower",
+                "nameLocation": "482:8:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "477:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6932,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "477:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6935,
+                "mutability": "mutable",
+                "name": "maxPower",
+                "nameLocation": "506:8:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "501:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6934,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "501:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6937,
+                "mutability": "mutable",
+                "name": "productionRate",
+                "nameLocation": "530:14:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "525:19:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6936,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "525:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6939,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "599:6:38",
+                "nodeType": "VariableDeclaration",
+                "scope": 6940,
+                "src": "594:11:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6938,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "594:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structMine",
+            "nameLocation": "355:10:38",
+            "nodeType": "StructDefinition",
+            "scope": 6941,
+            "src": "348:265:38",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6942,
+        "src": "27:589:38",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:618:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.546Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "contractName": "ICharacter",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "getAccountPower",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"getAccountPower\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ICharacter.sol\":\"ICharacter\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ICharacter.sol\":{\"keccak256\":\"0x09485e01dc83a8a1efb4722d2542a6dd7da9b3fd42fc355278e5c2e29a6101eb\",\"urls\":[\"bzz-raw://1abcc8c4d848ce1eeffeef7619f1c9135f2b7bb0d78ecfaf4c0f32d99bf0b91d\",\"dweb:/ipfs/QmXCG368VTxntDZW3THikUDj2Wz9MeBFpDLbBEqnS3ApVq\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface ICharacter {\r\n    function getAccountPower(address account) external returns (uint);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\ICharacter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ICharacter.sol",
+    "exportedSymbols": {
+      "ICharacter": [
+        6868
+      ]
+    },
+    "id": 6869,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6860,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:34"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICharacter",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6868,
+        "linearizedBaseContracts": [
+          6868
+        ],
+        "name": "ICharacter",
+        "nameLocation": "37:10:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3036fcde",
+            "id": 6867,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAccountPower",
+            "nameLocation": "64:15:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6863,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6862,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "88:7:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6867,
+                  "src": "80:15:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6861,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "80:7:34",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "79:17:34"
+            },
+            "returnParameters": {
+              "id": 6866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6865,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6867,
+                  "src": "115:4:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6864,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "115:4:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:6:34"
+            },
+            "scope": 6868,
+            "src": "55:66:34",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6869,
+        "src": "27:97:34",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:126:34"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ICharacter.sol",
+    "exportedSymbols": {
+      "ICharacter": [
+        6868
+      ]
+    },
+    "id": 6869,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6860,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:34"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICharacter",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6868,
+        "linearizedBaseContracts": [
+          6868
+        ],
+        "name": "ICharacter",
+        "nameLocation": "37:10:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "3036fcde",
+            "id": 6867,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAccountPower",
+            "nameLocation": "64:15:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6863,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6862,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "88:7:34",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6867,
+                  "src": "80:15:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6861,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "80:7:34",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "79:17:34"
+            },
+            "returnParameters": {
+              "id": 6866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6865,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6867,
+                  "src": "115:4:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6864,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "115:4:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:6:34"
+            },
+            "scope": 6868,
+            "src": "55:66:34",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6869,
+        "src": "27:97:34",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:126:34"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.537Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

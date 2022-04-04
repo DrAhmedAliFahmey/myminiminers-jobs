@@ -1,0 +1,364 @@
+{
+  "contractName": "IGnomes",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "collectionId",
+          "type": "uint8"
+        }
+      ],
+      "name": "getPlayerCollectionsPower",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"collectionId\",\"type\":\"uint8\"}],\"name\":\"getPlayerCollectionsPower\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IGnomes.sol\":\"IGnomes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IGnomes.sol\":{\"keccak256\":\"0xb14eff088185d3bb4286d7806f5b7a0cc9acfaf66ee5b8add2af38600f7c023a\",\"urls\":[\"bzz-raw://e0bbd19fc125cdd3bdbd26e637d98e397e3bbafe0fb707479b91725ec731aef6\",\"dweb:/ipfs/QmfKSRWEM8JweQrYZAdjAZE5dvJ4UvUPJ8dPp2NVWhQ7WS\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface IGnomes {\r\n    function getPlayerCollectionsPower(address player, uint8 collectionId) external returns (uint);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IGnomes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IGnomes.sol",
+    "exportedSymbols": {
+      "IGnomes": [
+        6907
+      ]
+    },
+    "id": 6908,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6897,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:37"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGnomes",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6907,
+        "linearizedBaseContracts": [
+          6907
+        ],
+        "name": "IGnomes",
+        "nameLocation": "37:7:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fcebff25",
+            "id": 6906,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayerCollectionsPower",
+            "nameLocation": "61:25:37",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6899,
+                  "mutability": "mutable",
+                  "name": "player",
+                  "nameLocation": "95:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "87:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6898,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "87:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6901,
+                  "mutability": "mutable",
+                  "name": "collectionId",
+                  "nameLocation": "109:12:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "103:18:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6900,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "86:36:37"
+            },
+            "returnParameters": {
+              "id": 6905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6904,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "141:4:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6903,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "141:4:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "140:6:37"
+            },
+            "scope": 6907,
+            "src": "52:95:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6908,
+        "src": "27:123:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:152:37"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IGnomes.sol",
+    "exportedSymbols": {
+      "IGnomes": [
+        6907
+      ]
+    },
+    "id": 6908,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6897,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:37"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGnomes",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6907,
+        "linearizedBaseContracts": [
+          6907
+        ],
+        "name": "IGnomes",
+        "nameLocation": "37:7:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fcebff25",
+            "id": 6906,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPlayerCollectionsPower",
+            "nameLocation": "61:25:37",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6899,
+                  "mutability": "mutable",
+                  "name": "player",
+                  "nameLocation": "95:6:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "87:14:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6898,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "87:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6901,
+                  "mutability": "mutable",
+                  "name": "collectionId",
+                  "nameLocation": "109:12:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "103:18:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6900,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:5:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "86:36:37"
+            },
+            "returnParameters": {
+              "id": 6905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6904,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6906,
+                  "src": "141:4:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6903,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "141:4:37",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "140:6:37"
+            },
+            "scope": 6907,
+            "src": "52:95:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6908,
+        "src": "27:123:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:152:37"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.543Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

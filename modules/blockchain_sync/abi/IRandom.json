@@ -1,0 +1,241 @@
+{
+  "contractName": "IRandom",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getRandomNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getRandomNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IRandom.sol\":\"IRandom\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IRandom.sol\":{\"keccak256\":\"0xc01cd23addc7cc8eab3759f5aff3466a3d1b2dee1c4dfd752c6c8ce634c2409a\",\"urls\":[\"bzz-raw://e1daf5e0282509d00e36f7e307606b6b9f5c0e544dacb7a6a80f9a4723975bd4\",\"dweb:/ipfs/Qma7jDrDAZjvcorc1BRSPhxS8tfvF5T2DcGbh8WDY3vJ6C\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\n\r\ninterface IRandom {\r\n    function getRandomNumber() external returns (uint);\r\n}\r\n\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IRandom.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IRandom.sol",
+    "exportedSymbols": {
+      "IRandom": [
+        6981
+      ]
+    },
+    "id": 6982,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6975,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRandom",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6981,
+        "linearizedBaseContracts": [
+          6981
+        ],
+        "name": "IRandom",
+        "nameLocation": "39:7:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "dbdff2c1",
+            "id": 6980,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRandomNumber",
+            "nameLocation": "63:15:42",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6976,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "78:2:42"
+            },
+            "returnParameters": {
+              "id": 6979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6978,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6980,
+                  "src": "99:4:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6977,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:6:42"
+            },
+            "scope": 6981,
+            "src": "54:51:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6982,
+        "src": "29:79:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:112:42"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IRandom.sol",
+    "exportedSymbols": {
+      "IRandom": [
+        6981
+      ]
+    },
+    "id": 6982,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6975,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRandom",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6981,
+        "linearizedBaseContracts": [
+          6981
+        ],
+        "name": "IRandom",
+        "nameLocation": "39:7:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "dbdff2c1",
+            "id": 6980,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRandomNumber",
+            "nameLocation": "63:15:42",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6976,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "78:2:42"
+            },
+            "returnParameters": {
+              "id": 6979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6978,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6980,
+                  "src": "99:4:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6977,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:6:42"
+            },
+            "scope": 6981,
+            "src": "54:51:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6982,
+        "src": "29:79:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:112:42"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.553Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

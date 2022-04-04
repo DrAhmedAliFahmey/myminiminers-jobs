@@ -1,0 +1,358 @@
+{
+  "contractName": "IGnomeStats",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getAllGnomes",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint8",
+              "name": "id",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "rarity",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "collectionId",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint32",
+              "name": "basePower",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bool",
+              "name": "exists",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct IGnome.structGnome[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getAllGnomes\",\"outputs\":[{\"components\":[{\"internalType\":\"uint8\",\"name\":\"id\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"rarity\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"collectionId\",\"type\":\"uint8\"},{\"internalType\":\"uint32\",\"name\":\"basePower\",\"type\":\"uint32\"},{\"internalType\":\"bool\",\"name\":\"exists\",\"type\":\"bool\"}],\"internalType\":\"struct IGnome.structGnome[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IGnomeStats.sol\":\"IGnomeStats\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IGnome.sol\":{\"keccak256\":\"0x9d2753f1d3fbdea99c1db5567f0a2b64998be9a3707ca818dc947499f36557f1\",\"urls\":[\"bzz-raw://d2ab5c3f34d00e72cd051eb8c53ca871ee109238579436bc8fd88abc3cce685b\",\"dweb:/ipfs/QmRfJh7gAxAZDfzJ6ejFMUaEc2h4KCVXvHZbFqpBYoFywe\"]},\"project:/contracts/interfaces/IGnomeStats.sol\":{\"keccak256\":\"0xcce0b8e199f3d9a75ed219f705f181f6ab2b54687b8e5d3350d9fc2bc1715a61\",\"urls\":[\"bzz-raw://2847f6f37b9bbe14b11df523b073472b135665a800ba402b4b595f7e074c6a9d\",\"dweb:/ipfs/QmbGE2RLdc2eqmxAzna6Co66g1ffACzrrDt4Kjcm7yuyv9\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\nimport \"./IGnome.sol\";\r\n\r\ninterface IGnomeStats is IGnome {\r\n\r\n  //  function getCollectionById(uint id) external view returns (uint[] memory);\r\n\r\n    function getAllGnomes() external view returns (structGnome[] memory);\r\n\r\n  //  function getGnomesPower(uint8[] calldata gnomeIds, uint8[] calldata gnomeLevels) external view returns (uint64[] memory);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IGnomeStats.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IGnomeStats.sol",
+    "exportedSymbols": {
+      "IGnome": [
+        6882
+      ],
+      "IGnomeStats": [
+        6895
+      ]
+    },
+    "id": 6896,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6884,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:36"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IGnome.sol",
+        "file": "./IGnome.sol",
+        "id": 6885,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6896,
+        "sourceUnit": 6883,
+        "src": "27:22:36",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6886,
+              "name": "IGnome",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6882,
+              "src": "78:6:36"
+            },
+            "id": 6887,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:6:36"
+          }
+        ],
+        "canonicalName": "IGnomeStats",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6895,
+        "linearizedBaseContracts": [
+          6895,
+          6882
+        ],
+        "name": "IGnomeStats",
+        "nameLocation": "63:11:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "8d48258b",
+            "id": 6894,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllGnomes",
+            "nameLocation": "187:12:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "199:2:36"
+            },
+            "returnParameters": {
+              "id": 6893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6894,
+                  "src": "225:20:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_structGnome_$6881_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IGnome.structGnome[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6890,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 6889,
+                        "name": "structGnome",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 6881,
+                        "src": "225:11:36"
+                      },
+                      "referencedDeclaration": 6881,
+                      "src": "225:11:36",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_structGnome_$6881_storage_ptr",
+                        "typeString": "struct IGnome.structGnome"
+                      }
+                    },
+                    "id": 6891,
+                    "nodeType": "ArrayTypeName",
+                    "src": "225:13:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_structGnome_$6881_storage_$dyn_storage_ptr",
+                      "typeString": "struct IGnome.structGnome[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:22:36"
+            },
+            "scope": 6895,
+            "src": "178:69:36",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6896,
+        "src": "53:328:36",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:383:36"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IGnomeStats.sol",
+    "exportedSymbols": {
+      "IGnome": [
+        6882
+      ],
+      "IGnomeStats": [
+        6895
+      ]
+    },
+    "id": 6896,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6884,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:36"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IGnome.sol",
+        "file": "./IGnome.sol",
+        "id": 6885,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 6896,
+        "sourceUnit": 6883,
+        "src": "27:22:36",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6886,
+              "name": "IGnome",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6882,
+              "src": "78:6:36"
+            },
+            "id": 6887,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:6:36"
+          }
+        ],
+        "canonicalName": "IGnomeStats",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6895,
+        "linearizedBaseContracts": [
+          6895,
+          6882
+        ],
+        "name": "IGnomeStats",
+        "nameLocation": "63:11:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "8d48258b",
+            "id": 6894,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllGnomes",
+            "nameLocation": "187:12:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6888,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "199:2:36"
+            },
+            "returnParameters": {
+              "id": 6893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6892,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6894,
+                  "src": "225:20:36",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_structGnome_$6881_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IGnome.structGnome[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 6890,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 6889,
+                        "name": "structGnome",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 6881,
+                        "src": "225:11:36"
+                      },
+                      "referencedDeclaration": 6881,
+                      "src": "225:11:36",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_structGnome_$6881_storage_ptr",
+                        "typeString": "struct IGnome.structGnome"
+                      }
+                    },
+                    "id": 6891,
+                    "nodeType": "ArrayTypeName",
+                    "src": "225:13:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_structGnome_$6881_storage_$dyn_storage_ptr",
+                      "typeString": "struct IGnome.structGnome[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:22:36"
+            },
+            "scope": 6895,
+            "src": "178:69:36",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6896,
+        "src": "53:328:36",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:383:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.541Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

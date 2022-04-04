@@ -1,0 +1,302 @@
+{
+  "contractName": "IMines",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "collectionId",
+          "type": "uint8"
+        }
+      ],
+      "name": "claimByAccount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"collectionId\",\"type\":\"uint8\"}],\"name\":\"claimByAccount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IMines.sol\":\"IMines\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IMines.sol\":{\"keccak256\":\"0x642aeb41af3f977017ac728f17cc9fc19569d81c49e9679ab8155602e5838927\",\"urls\":[\"bzz-raw://002f6ff3bdeaacf2db7c9113b68451f2819e844d28a1c4501f5e88f02757eb24\",\"dweb:/ipfs/QmRcPoemwxYbvDw81fcBpJMcHL9aQLir5f1bDSjzwtNPvw\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface IMines {\r\n    function claimByAccount(address account, uint8 collectionId) external;\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IMines.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IMines.sol",
+    "exportedSymbols": {
+      "IMines": [
+        6951
+      ]
+    },
+    "id": 6952,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6943,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:39"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMines",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6951,
+        "linearizedBaseContracts": [
+          6951
+        ],
+        "name": "IMines",
+        "nameLocation": "37:6:39",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "60b27764",
+            "id": 6950,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimByAccount",
+            "nameLocation": "60:14:39",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6948,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6945,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "83:7:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6950,
+                  "src": "75:15:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6944,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "75:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6947,
+                  "mutability": "mutable",
+                  "name": "collectionId",
+                  "nameLocation": "98:12:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6950,
+                  "src": "92:18:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6946,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "92:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "74:37:39"
+            },
+            "returnParameters": {
+              "id": 6949,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "120:0:39"
+            },
+            "scope": 6951,
+            "src": "51:70:39",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6952,
+        "src": "27:97:39",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:126:39"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IMines.sol",
+    "exportedSymbols": {
+      "IMines": [
+        6951
+      ]
+    },
+    "id": 6952,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6943,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:39"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMines",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 6951,
+        "linearizedBaseContracts": [
+          6951
+        ],
+        "name": "IMines",
+        "nameLocation": "37:6:39",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "60b27764",
+            "id": 6950,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimByAccount",
+            "nameLocation": "60:14:39",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6948,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6945,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "83:7:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6950,
+                  "src": "75:15:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6944,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "75:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6947,
+                  "mutability": "mutable",
+                  "name": "collectionId",
+                  "nameLocation": "98:12:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6950,
+                  "src": "92:18:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 6946,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "92:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "74:37:39"
+            },
+            "returnParameters": {
+              "id": 6949,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "120:0:39"
+            },
+            "scope": 6951,
+            "src": "51:70:39",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6952,
+        "src": "27:97:39",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:126:39"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.548Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

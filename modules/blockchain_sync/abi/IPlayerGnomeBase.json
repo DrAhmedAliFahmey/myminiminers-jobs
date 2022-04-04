@@ -1,0 +1,249 @@
+{
+  "contractName": "IPlayerGnomeBase",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IPlayerGnomeBase.sol\":\"IPlayerGnomeBase\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IPlayerGnomeBase.sol\":{\"keccak256\":\"0x29868bae55f62d3d87793ae12103ee2180f7f937f799edc23cffc29d853a2b39\",\"urls\":[\"bzz-raw://13362e7f9df2249cb52f1be9942febe6a098a7d5876915524b604455de5398a1\",\"dweb:/ipfs/QmYVr4mdUqRE2s7CHHAD1QhaDSn3E6J5EJjjzjUh5dkKzb\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\r\npragma solidity 0.8.10;\r\n\r\ninterface IPlayerGnomeBase {\r\n    struct structPlayerGnomeBase {\r\n        uint8 gnomeId;\r\n        uint8 level;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IPlayerGnomeBase.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IPlayerGnomeBase.sol",
+    "exportedSymbols": {
+      "IPlayerGnomeBase": [
+        6973
+      ]
+    },
+    "id": 6974,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6967,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlayerGnomeBase",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6973,
+        "linearizedBaseContracts": [
+          6973
+        ],
+        "name": "IPlayerGnomeBase",
+        "nameLocation": "39:16:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IPlayerGnomeBase.structPlayerGnomeBase",
+            "id": 6972,
+            "members": [
+              {
+                "constant": false,
+                "id": 6969,
+                "mutability": "mutable",
+                "name": "gnomeId",
+                "nameLocation": "109:7:41",
+                "nodeType": "VariableDeclaration",
+                "scope": 6972,
+                "src": "103:13:41",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6968,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "103:5:41",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6971,
+                "mutability": "mutable",
+                "name": "level",
+                "nameLocation": "133:5:41",
+                "nodeType": "VariableDeclaration",
+                "scope": 6972,
+                "src": "127:11:41",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6970,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:5:41",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerGnomeBase",
+            "nameLocation": "70:21:41",
+            "nodeType": "StructDefinition",
+            "scope": 6973,
+            "src": "63:83:41",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6974,
+        "src": "29:120:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "2:149:41"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IPlayerGnomeBase.sol",
+    "exportedSymbols": {
+      "IPlayerGnomeBase": [
+        6973
+      ]
+    },
+    "id": 6974,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6967,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "2:23:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlayerGnomeBase",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6973,
+        "linearizedBaseContracts": [
+          6973
+        ],
+        "name": "IPlayerGnomeBase",
+        "nameLocation": "39:16:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IPlayerGnomeBase.structPlayerGnomeBase",
+            "id": 6972,
+            "members": [
+              {
+                "constant": false,
+                "id": 6969,
+                "mutability": "mutable",
+                "name": "gnomeId",
+                "nameLocation": "109:7:41",
+                "nodeType": "VariableDeclaration",
+                "scope": 6972,
+                "src": "103:13:41",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6968,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "103:5:41",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6971,
+                "mutability": "mutable",
+                "name": "level",
+                "nameLocation": "133:5:41",
+                "nodeType": "VariableDeclaration",
+                "scope": 6972,
+                "src": "127:11:41",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6970,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "127:5:41",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structPlayerGnomeBase",
+            "nameLocation": "70:21:41",
+            "nodeType": "StructDefinition",
+            "scope": 6973,
+            "src": "63:83:41",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6974,
+        "src": "29:120:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "2:149:41"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.551Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

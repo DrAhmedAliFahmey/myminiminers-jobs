@@ -1,0 +1,411 @@
+{
+  "contractName": "IGnome",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IGnome.sol\":\"IGnome\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IGnome.sol\":{\"keccak256\":\"0x9d2753f1d3fbdea99c1db5567f0a2b64998be9a3707ca818dc947499f36557f1\",\"urls\":[\"bzz-raw://d2ab5c3f34d00e72cd051eb8c53ca871ee109238579436bc8fd88abc3cce685b\",\"dweb:/ipfs/QmRfJh7gAxAZDfzJ6ejFMUaEc2h4KCVXvHZbFqpBYoFywe\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface IGnome {\r\n    struct structGnome {\r\n        uint8 id;\r\n        uint8 rarity;\r\n        uint8 collectionId;\r\n        uint32 basePower;\r\n        bool exists;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\amit\\PhpstormProjects\\myminiminers-contracts-upgradable\\contracts\\interfaces\\IGnome.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IGnome.sol",
+    "exportedSymbols": {
+      "IGnome": [
+        6882
+      ]
+    },
+    "id": 6883,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6870,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGnome",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6882,
+        "linearizedBaseContracts": [
+          6882
+        ],
+        "name": "IGnome",
+        "nameLocation": "37:6:35",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IGnome.structGnome",
+            "id": 6881,
+            "members": [
+              {
+                "constant": false,
+                "id": 6872,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "87:2:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "81:8:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6871,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "81:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6874,
+                "mutability": "mutable",
+                "name": "rarity",
+                "nameLocation": "106:6:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "100:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6873,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "100:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6876,
+                "mutability": "mutable",
+                "name": "collectionId",
+                "nameLocation": "129:12:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "123:18:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6875,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "123:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6878,
+                "mutability": "mutable",
+                "name": "basePower",
+                "nameLocation": "159:9:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "152:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6877,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:6:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6880,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "184:6:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "179:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6879,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "179:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structGnome",
+            "nameLocation": "58:11:35",
+            "nodeType": "StructDefinition",
+            "scope": 6882,
+            "src": "51:147:35",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6883,
+        "src": "27:174:35",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:203:35"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IGnome.sol",
+    "exportedSymbols": {
+      "IGnome": [
+        6882
+      ]
+    },
+    "id": 6883,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6870,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGnome",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 6882,
+        "linearizedBaseContracts": [
+          6882
+        ],
+        "name": "IGnome",
+        "nameLocation": "37:6:35",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IGnome.structGnome",
+            "id": 6881,
+            "members": [
+              {
+                "constant": false,
+                "id": 6872,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "87:2:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "81:8:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6871,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "81:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6874,
+                "mutability": "mutable",
+                "name": "rarity",
+                "nameLocation": "106:6:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "100:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6873,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "100:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6876,
+                "mutability": "mutable",
+                "name": "collectionId",
+                "nameLocation": "129:12:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "123:18:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 6875,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "123:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6878,
+                "mutability": "mutable",
+                "name": "basePower",
+                "nameLocation": "159:9:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "152:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 6877,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:6:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6880,
+                "mutability": "mutable",
+                "name": "exists",
+                "nameLocation": "184:6:35",
+                "nodeType": "VariableDeclaration",
+                "scope": 6881,
+                "src": "179:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 6879,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "179:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "structGnome",
+            "nameLocation": "58:11:35",
+            "nodeType": "StructDefinition",
+            "scope": 6882,
+            "src": "51:147:35",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6883,
+        "src": "27:174:35",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:203:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-04-04T12:24:52.539Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
