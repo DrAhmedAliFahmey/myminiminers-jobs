@@ -9,7 +9,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER
 
 const CharacterAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Character.json"), "utf8"));
 
-const CharacterContract = new web3.eth.Contract(CharacterAbi.abi, process.env.CHARACTER_CONTART_ADDRESS);
+const CharacterContract = new web3.eth.Contract(CharacterAbi.abi, process.env.CHARACTER_CONTRACT_ADDRESS);
 
 exports.syncBlocks = function () {
 	return syncer.syncBlocks(CONTRACTS_NAMES.CHARACTER_CONTRACT, CharacterContract, eventsHandlerFunction);

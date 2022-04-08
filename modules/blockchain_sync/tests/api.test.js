@@ -12,8 +12,8 @@ const MyMiniMinersAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockch
 const GameActionsAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/GameActions.json"), "utf8"));
 
 
-const MyMiniMiners = new web3.eth.Contract(MyMiniMinersAbi.abi, process.env.MYMINIMINERS_CONTART_ADDRESS);
-const GameActions = new web3.eth.Contract(GameActionsAbi.abi, process.env.GAMEACTIONS_CONTART_ADDRESS);
+const MyMiniMiners = new web3.eth.Contract(MyMiniMinersAbi.abi, process.env.MYMINIMINERS_CONTRACT_ADDRESS);
+const GameActions = new web3.eth.Contract(GameActionsAbi.abi, process.env.GAMEACTIONS_CONTRACT_ADDRESS);
 const gameActionsAccount = web3.eth.accounts.privateKeyToAccount(process.env.GAME_SERVICE_ACCOUNT);
 web3.eth.accounts.wallet.add(process.env.GAME_SERVICE_ACCOUNT);
 web3.eth.accounts.wallet.add("ac77d5a6cb6962ba50379c3170024c61750199a979faa8d95aaea00e8ce24f2f");

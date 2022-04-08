@@ -8,7 +8,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER
 
 const MinesAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Mines.json"), "utf8"));
 
-const MinesContract = new web3.eth.Contract(MinesAbi.abi, process.env.MINES_CONTART_ADDRESS);
+const MinesContract = new web3.eth.Contract(MinesAbi.abi, process.env.MINES_CONTRACT_ADDRESS);
 
 exports.syncBlocks = function () {
 	return syncer.syncBlocks(CONTRACTS_NAMES.MINES_CONTRACT, MinesContract, eventsHandlerFunction);

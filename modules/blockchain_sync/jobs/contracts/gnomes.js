@@ -12,7 +12,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.CHAIN_PROVIDER
 
 const GnomesAbi = JSON.parse(fs.readFileSync(path.resolve("modules/blockchain_sync/abi/Gnomes.json"), "utf8"));
 
-const GnomesContract = new web3.eth.Contract(GnomesAbi.abi, process.env.GNOMES_CONTART_ADDRESS);
+const GnomesContract = new web3.eth.Contract(GnomesAbi.abi, process.env.GNOMES_CONTRACT_ADDRESS);
 
 exports.syncBlocks = function () {
 	return syncer.syncBlocks(CONTRACTS_NAMES.GNOMES_CONTRACT, GnomesContract, eventsHandlerFunction);
